@@ -69,13 +69,22 @@ void countTest(){
     Rectangle rectangle = new Rectangle(10, 15);
     Square square = new Square(15);
     Canvas canvas = new Canvas();
+    Canvas canvas2 = new Canvas();
     Canvas mainCanvas = new Canvas();
+    Canvas mainCanvas2 = new Canvas();
     canvas.addShape(square);
     canvas.addShape(rectangle);
+    canvas2.addShape(rectangle);
+    canvas2.addShape(rectangle);
     mainCanvas.addShape(square);
     mainCanvas.addShape(rectangle);
     mainCanvas.addShape(canvas);
-    assertEquals(4, mainCanvas.count());
+    mainCanvas2.addShape(square);
+    mainCanvas2.addShape(rectangle);
+    mainCanvas2.addShape(canvas);
+    mainCanvas2.addShape(canvas2);
+    assertEquals(5, mainCanvas.count());
+    assertEquals(8, mainCanvas2.count());
 }
 }
 

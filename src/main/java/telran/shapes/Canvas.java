@@ -45,7 +45,13 @@ a = (short)(b + c);
 public int count() {
   int count = 0;
   for (Shape shape : shapes ){
-count += shape.count();
+if (shape instanceof Canvas){
+  count++;
+  Canvas canvas = (Canvas) shape;
+  count += canvas.count();
+} else {
+  count +=1;
+}
   }
   return count;
 }
