@@ -16,6 +16,10 @@ public Rectangle(int width, int height) {
     public int square() {
         return width == 0 | height == 0 ? -1 : width < 0 | height< 0 ? -1 : width * height;
     }
+    @Override
+    public int count() {
+        return 1;
+    }
 
 
 }

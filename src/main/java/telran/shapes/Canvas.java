@@ -34,4 +34,19 @@ public class Canvas implements Shape{
     }
     return sumSquare;
 }
+/*short a, b = 10, c=20;
+a = (short)(b + c);
+//Operator cast is some converting from one type of a primitive to another
+//methodX(Object obj); x.methodX(y)
+//if(x instanceof Y)(
+//.......
+//)((Y)x).f1()
+}*/
+public int count() {
+  int count = 0;
+  for (Shape shape : shapes ){
+count += shape.count();
+  }
+  return count;
+}
 }

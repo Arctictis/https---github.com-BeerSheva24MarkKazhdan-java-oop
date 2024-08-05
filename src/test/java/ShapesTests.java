@@ -64,4 +64,18 @@ public class ShapesTests {
         assertEquals(50, canvas3.perimeter());
         assertEquals(150, canvas3.square());
     }
+@Test
+void countTest(){
+    Rectangle rectangle = new Rectangle(10, 15);
+    Square square = new Square(15);
+    Canvas canvas = new Canvas();
+    Canvas mainCanvas = new Canvas();
+    canvas.addShape(square);
+    canvas.addShape(rectangle);
+    mainCanvas.addShape(square);
+    mainCanvas.addShape(rectangle);
+    mainCanvas.addShape(canvas);
+    assertEquals(4, mainCanvas.count());
 }
+}
+
